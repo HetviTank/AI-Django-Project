@@ -19,7 +19,8 @@ import ai_project.views as views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
+    # path('', views.home),
+    path('', include('login.urls')),
     path('convertor/', include('convertor.urls')),
     path('diffusion/', include('diffusion.urls')),
 ]
