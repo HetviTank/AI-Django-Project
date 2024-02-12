@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'vector_db',
+    'convertor',
+    'diffusion',
+    'OCR',
+    'login',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +64,8 @@ TEMPLATES = [
             os.path.join(BASE_DIR, 'vector_db', 'templates'),
             os.path.join(BASE_DIR, 'convertor', 'templates'),
             os.path.join(BASE_DIR, 'diffusion', 'templates'),
-            os.path.join(BASE_DIR, 'OCR', 'templates')
+            os.path.join(BASE_DIR, 'OCR', 'templates'),
+            os.path.join(BASE_DIR, 'login', 'templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -80,12 +86,15 @@ WSGI_APPLICATION = 'ai_project.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'vector_db',
+        'USER': 'laravel',
+        'PASSWORD': '123',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
