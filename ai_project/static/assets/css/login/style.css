@@ -42,6 +42,11 @@ html {
 	padding-top: 30px;
 }
 
+#login-box .controls p {
+	color: white;
+	/* Set text color to white */
+}
+
 #login-box .controls input {
 	border-radius: 0px;
 	background: rgb(250, 249, 249);

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sharpened Image</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #f8f9fa;
+            /* Light gray background color */
+            border: none;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+            /* Shadow effect */
+        }
+
+        .card-title {
+            color: #007bff;
+            /* Blue color for the title */
+            margin-bottom: 20px;
+            /* Add some space below the title */
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #007bff;
+            /* Blue border for images */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        {% block sidebar %}
+        {% include "index.html" %}
+        {% endblock %}
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Original Image</h2>
+                        <img src="{{ uploaded_image_path }}" class="img-fluid rounded" alt="Original Image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Sharpened Image</h2>
+                        <img src="{{ sharpened_image_path }}" class="img-fluid rounded" alt="Sharpened Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

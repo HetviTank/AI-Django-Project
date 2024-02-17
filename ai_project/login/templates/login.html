@@ -20,12 +20,17 @@
                 <h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
             </div><!-- /.logo -->
 
-            <div class="controls">
-                <input type="text" name="username" placeholder="Username" class="form-control" />
-                <input type="text" name="username" placeholder="Password" class="form-control"
-                    style="margin-bottom: 10px;" />
-                <button type="button" class="btn btn-default btn-block btn-custom">Login</button>
-            </div>
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                <div class="controls">
+                    <p>Email</p>
+                    <input type="text" name="firstname" placeholder="Email" class="form-control" />
+                    <p>Password</p>
+                    <input type="password" name="password" placeholder="Password" class="form-control"
+                        style="margin-bottom: 10px;" />
+                    <button type="submit" class="btn btn-default btn-block btn-custom">Login</button>
+                </div>
+            </form>
         </div>
     </div>
     <div id="particles-js"></div>

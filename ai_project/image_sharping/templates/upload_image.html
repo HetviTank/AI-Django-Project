@@ -1,15 +1,25 @@
-<!-- templates/excel_converter.html -->
+<!-- upload_image.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
     <!-- Add Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-
-<body>
     <style>
+        /* Paste the CSS styles here */
+        .file-upload-section {
+            margin: 20px auto;
+            padding: 40px;
+            border: 2px dashed #3498db;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+        }
+
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
             width: 70%;
@@ -35,11 +45,6 @@
             margin-bottom: 15px;
         }
 
-        form p {
-            text-align: center;
-            margin: 20px 0;
-        }
-
         form input {
             display: none;
         }
@@ -49,7 +54,7 @@
             color: #3498db;
         }
 
-        form button {
+        button[type="submit"] {
             margin-top: 20px;
             color: #fff;
             background: #28a745;
@@ -61,60 +66,40 @@
             transition: all .2s ease;
         }
 
-        form button:hover {
+        button[type="submit"]:hover {
             background: #218838;
         }
 
-        form button:active {
+        button[type="submit"]:active {
             border: 0;
         }
     </style>
+</head>
 
-    <div class="card shadow-lg card-flush pt-3 mb-5 mb-lg-10">
-        <!-- Card header -->
+<body>
+    <div>
+        {% block sidebar %}
+        {% include "index.html" %}
+        {% endblock %}
+    </div>
+    <div class="card shadow-lg card-flush">
         <div class="card-title">
-            <h2 class="fw-bolder">Converter</h2>
+            <h2 class="fw-bolder">Upload Image</h2>
         </div>
-
-        <!-- File upload form card body -->
         <div class="form-card">
-            <form method="post" enctype="multipart/form-data" action="/upload/">
+            <form action="{% url 'sharpen_image' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                <div class="form-group">
-                    <label for="excelFile">Choose Excel File</label>
-                    <input hidden type="file" class="form-control-file" id="excelFile" name="excelFile"
-                        accept=".xls, .xlsx" required>
+                <div class="file-upload-section" id="file-upload" ondragover="handleDragOver(event)"
+                    ondragleave="handleDragLeave()" ondrop="handleFileDrop(event)">
+                    <label for="image-file" class="btn btn-primary">Choose Image</label>
+                    <p>Drag your image here or click to browse.</p>
+                    <input type="file" name="image" id="image-file" accept="image/*" style="display: none;">
                 </div>
-                <p>Drag your files here or click in this area.</p>
-                <button type="submit">Upload</button>
+                <button type="submit">Upload and Sharpen</button>
             </form>
         </div>
-
-        <!-- Conversion buttons card body -->
-        <div class="card-body pt-0">
-            <div class="row">
-                <div class="card-body">
-                    <input type="hidden" id="conversionFormat" name="conversionFormat" value="">
-                    <button type="button" class="btn btn-success" onclick="setConversionFormat('json')">Convert to
-                        JSON</button>
-                    <button type="submit" class="btn btn-info">Convert to Python</button>
-                    <button type="submit" class="btn btn-warning">Convert to Java</button>
-                    <button type="submit" class="btn btn-danger">Convert to PHP</button>
-                </div>
-            </div>
-        </div>
-
     </div>
-
-
-    <script>
-        function setConversionFormat(format) {
-            console.log(format);
-            document.getElementById('conversionFormat').value = format;
-        }
-    </script>
-
-    <!-- Add Bootstrap JS and Popper.js if needed -->
+    <!-- Add Bootstrap JS and jQuery if needed -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -124,18 +109,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('form input').change(function () {
-                $('form p').text(this.files.length + " file(s) selected");
-            });
-        });
-    </script>
-
-
-
-
+    <!-- Your custom JavaScript code can go here -->
 </body>
 
 </html>

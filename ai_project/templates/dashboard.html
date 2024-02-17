@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<!--begin::Head-->
+
+<head>
+    <title>AI Solutions</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+    <link href="{% static 'assets/plugins/custom/datatables/datatables.bundle.css' %}" rel="stylesheet"
+        type="text/css" />
+    <link href="{% static 'assets/plugins/vis-timeline/vis-timeline.bundle.css'}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/plugins/global/plugins.bundle.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body id="kt_body" class="header-extended header-fixed header-tablet-and-mobile-fixed">
+    <div>
+        {% block sidebar %}
+        {% include "index.html" %}
+        {% endblock %}
+    </div>
+    <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
+        <!--begin::Post-->
+        <div class="content flex-row-fluid" id="kt_content">
+            <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
+                <div class="col-xl-8" style="width: 2000px;">
+                    <div class="card card-flush h-lg-100" style="display: flex;">
+                        <div style="flex-grow: 1;">
+                            <div class="card-header pt-100">
+                                <!-- Title -->
+                                <h3 class="card-title align-items-start flex-column">
+                                    <span class="card-label fw-bold text-dark">Convertor</span>
+                                    <span class="text-gray-400 pt-2 fw-semibold fs-6">Excel to Python JSON JAVA
+                                        PHP</span>
+                                </h3>
+                            </div>
+
+                            <div class="card-body pt-0 px-0">
+                                <div id="kt_charts_widget_1" class="min-h-auto ps-4 pe-6 mb-3"
+                                    style="height: 200px; display: flex; align-items: center;">
+                                    <!-- Description -->
+
+
+                                    <!-- Image -->
+                                    <img src="{% static 'assets/images/1.avif' %}" alt="alternatetext"
+                                        style="width: 200px; height: auto; border-radius: 25px;">
+                                    <div
+                                        style="margin-right: 10px; font-family: Times New Roman, sans-serif;font-size: 20px">
+                                        🐍
+                                        Leveraging
+                                        Python within data science frameworks, our converter seamlessly transforms Excel
+                                        files into JSON format, fostering compatibility with PHP, Java, and Python
+                                        environments. 📊💻</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
+                <div class="col-xl-8" style="width: 2000px;">
+                    <div class="card card-flush h-lg-100" style="background-color: #7239EA">
+                        <div class="card-header pt-100">
+                            <h3 class="card-title align-items-start flex-column">
+                                <span class="card-label fw-bold text-dark">Image Embedding</span>
+                                <span class="text-gray-400 pt-2 fw-semibold fs-6">Discover related images
+                                    seamlessly through our vector embedding-powered search.</span>
+                            </h3>
+
+                        </div>
+                        <div class="card-body pt-0 px-0">
+                            <div id="kt_charts_widget_1" class="min-h-auto ps-4 pe-6 mb-3"
+                                style="height: 200px;display: flex; align-items: center;">
+                                <img src="{% static 'assets/images/2.avif' %}" alt="alternatetext"
+                                    style="width: 200px; height: auto; margin-right: 10px; border-radius: 25px;">
+                                <div
+                                    style="margin-right: 10px; font-family: Times New Roman, sans-serif;font-size: 20px">
+                                    🔍 Delve into an advanced image embedding system where images are stored as vectors
+                                    in the database. Harnessing this technology, we compare vector representations to
+                                    retrieve and display visually similar images, enhancing your search experience.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
+                <div class="col-xl-8" style="width: 2000px;">
+                    <div class="card card-flush h-lg-100">
+                        <!--begin::Header-->
+                        <div class="card-header pt-100">
+                            <!--begin::Title-->
+                            <h3 class="card-title align-items-start flex-column">
+                                <span class="card-label fw-bold text-dark">Text To Image</span>
+                                <span class="text-gray-400 pt-2 fw-semibold fs-6">Transforming text into
+                                    visually striking images through the power of generative AI.</span>
+                            </h3>
+
+                        </div>
+                        <div class="card-body pt-0 px-0">
+                            <div id="kt_charts_widget_1" class="min-h-auto ps-4 pe-6 mb-3"
+                                style="height: 200px;display: flex; align-items: center;">
+                                <img src="{% static 'assets/images/3.jpg' %}" alt="alternatetext"
+                                    style="width: 200px; height: auto; margin-right: 10px;border-radius: 25px;">
+                                <div
+                                    style="margin-right: 10px; font-family: Times New Roman, sans-serif;font-size: 20px">
+                                    💡 Witness the marvels of our Text-to-Image feature, driven by cutting-edge
+                                    generative AI models! Enter your text, and behold as captivating visuals emerge,
+                                    transforming your words into vibrant illustrations. 🚀</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
+                <div class="col-xl-8" style="width: 2000px;">
+                    <div class="card card-flush h-lg-100" style="background-color: #7239EA">
+                        <div class="card-header pt-100">
+                            <h3 class="card-title align-items-start flex-column">
+                                <span class="card-label fw-bold text-dark">Optical Character
+                                    Recognition</span>
+                                <span class="text-gray-400 pt-2 fw-semibold fs-6">Effortlessly extract text
+                                    from images with advanced Optical Character Recognition (OCR)
+                                    technology.</span>
+                            </h3>
+
+                        </div>
+                        <div class="card-body pt-0 px-0">
+                            <div id="kt_charts_widget_1" class="min-h-auto ps-4 pe-6 mb-3" s
+                                style="height: 200px;display: flex; align-items: center;" display: flex; align-items:
+                                center;>
+                                <img src="{% static 'assets/images/4.jpg' %}" alt="alternatetext"
+                                    style="width: 200px; height: auto; margin-right: 10px; border-radius: 25px;">
+                                <div
+                                    style="margin-right: 10px; font-family: Times New Roman, sans-serif;font-size: 20px">
+                                    🚀 Unlock the potential of Optical Character Recognition (OCR)! Upload images
+                                    seamlessly and extract text effortlessly, streamlining your document digitization
+                                    process. 📸💬</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
+                <div class="col-xl-8" style="width: 2000px;">
+                    <div class="card card-flush h-lg-100">
+                        <!--begin::Header-->
+                        <div class="card-header pt-100">
+                            <!--begin::Title-->
+                            <h3 class="card-title align-items-start flex-column">
+                                <span class="card-label fw-bold text-dark">Sharpen image</span>
+                                <span class="text-gray-400 pt-2 fw-semibold fs-6">Transform blurry images
+                                    into clear and sharp visuals with precision image sharpening
+                                    technology.</span>
+                            </h3>
+
+                        </div>
+                        <div class="card-body pt-0 px-0">
+                            <div id="kt_charts_widget_1" class="min-h-auto ps-4 pe-6 mb-3"
+                                style="height: 200px;display: flex; align-items: center;">
+                                <img src="{% static 'assets/images/5.jpg' %}" alt="alternatetext"
+                                    style="width: 200px; height: auto; margin-right: 10px; border-radius: 25px;">
+                                <div
+                                    style="margin-right: 10px; font-family: Times New Roman, sans-serif;font-size: 20px">
+                                    💥 Elevate your images from blurry to sharp with our cutting-edge computer vision
+                                    models! Witness the transformation as we enhance image clarity and detail, providing
+                                    you with stunning visuals. 📷✨
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
+                <div class="col-xl-8" style="width: 2000px;">
+                    <div class="card card-flush h-lg-100" style="background-color: #7239EA">
+                        <div class="card-header pt-100">
+                            <h3 class="card-title align-items-center flex-column">
+                                <span class="card-label fw-bold text-dark" style="font-size: 24px;">About</span>
+                                <span class="text-gray-400 pt-2 fw-semibold fs-6">The AI Project</span>
+                            </h3>
+                        </div>
+                        <div class="card-body pt-0 px-0">
+                            <div id="kt_charts_widget_1" class="min-h-auto ps-4 pe-6 mb-3"
+                                style="height: 200px;display: flex; align-items: center;">
+                                <div style="font-family: Times New Roman, sans-serif; font-size: 24px;">
+                                    🎉 Welcome to the AI Project. 🎉
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger intent="WELCOME" chat-title="AeonX" agent-id="7f7f3c42-3c86-4a6a-b089-283bad652dda"
+    language-code="en"></df-messenger>
+
+</html>
