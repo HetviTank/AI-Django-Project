@@ -23,4 +23,5 @@ urlpatterns = [
     path('', include('login.urls')),
     path('convertor/', include('convertor.urls')),
     path('diffusion/', include('diffusion.urls')),
+    path('image_sharping/', include('image_sharping.urls')),
 ]

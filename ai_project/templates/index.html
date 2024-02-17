@@ -20,17 +20,17 @@
 <body id="kt_body" class="header-extended header-fixed header-tablet-and-mobile-fixed">
     <!--begin::Theme mode setup on page load-->
     <script>var defaultThemeMode = "light"; var themeMode; if (document.documentElement) { if (document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if (localStorage.getItem("data-bs-theme") !== null) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }</script>
-    <div class="d-flex flex-column flex-root">
+    <div class="d-flex flex-column flex-root header_all">
         <div class="page d-flex flex-row flex-column-fluid">
             <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
                 <div id="kt_header" class="header">
-                    <div class="header-top d-flex align-items-stretch flex-grow-1">
-                        <div class="d-flex container-xxl align-items-stretch">
+                    <div>
+                        <div>
                             <div class="d-flex align-items-center align-items-lg-stretch me-5 flex-row-fluid">
                                 <button
                                     class="d-lg-none btn btn-icon btn-color-white bg-hover-white bg-hover-opacity-10 w-35px h-35px h-md-40px w-md-40px ms-n3 me-2"
                                     id="kt_header_navs_toggle">
-                                    <i class="ki-duotone ki-abstract-14 fs-2">
+                                    <i>
                                         <span class="path1"></span>
                                         <span class="path2"></span>
                                     </i>
@@ -59,6 +59,10 @@
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" data-bs-toggle="tab"
+                                                    href="{% url 'sharpen_image' %}">Images</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab"
                                                     href="#kt_header_navs_tab_4">OCR</a>
                                             </li>
                                             <li class="nav-item">
@@ -72,14 +76,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="header-navs d-flex align-items-stretch flex-stack h-lg-70px w-100 py-5 py-lg-0 overflow-hidden overflow-lg-visible"
-                        id="kt_header_navs" data-kt-drawer="true" data-kt-drawer-name="header-menu"
-                        data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true"
-                        data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start"
-                        data-kt-drawer-toggle="#kt_header_navs_toggle" data-kt-swapper="true"
-                        data-kt-swapper-mode="append" data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header'}">
-
                     </div>
                 </div>
                 <div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">

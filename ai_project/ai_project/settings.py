@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'diffusion',
     'OCR',
     'login',
+    'image_sharping',
 ]
 
 MIDDLEWARE = [
