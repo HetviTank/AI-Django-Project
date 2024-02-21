@@ -128,6 +128,10 @@
     --bs-breakpoint-xl: 1200px;
     --bs-breakpoint-xxl: 1400px
 }
+.df-messenger {
+    --df-messenger-chat-background-color: #f0f0f0; /* Change the chat background color */
+    --df-messenger-font-color: #333; /* Change the font color */
+}
 
 [data-bs-theme=dark] {
     --bs-body-color: #FFFFFF;
