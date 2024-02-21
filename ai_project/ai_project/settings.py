@@ -89,10 +89,10 @@ WSGI_APPLICATION = 'ai_project.wsgi.application'
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'vector_db',
-        'USER': 'laravel',
-        'PASSWORD': '123',
-        'HOST': 'localhost',
+        'NAME': 'Ai_Solution',
+        'USER': 'python',
+        'PASSWORD': 'python',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
